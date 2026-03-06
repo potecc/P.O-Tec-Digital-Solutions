@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top G | P.O TEC DIGITAL SOLUTIONS Case Study</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+        .case-study-hero {
+            padding-top: 8rem;
+            padding-bottom: 4rem;
+            text-align: center;
+        }
+
+        .case-study-hero h1 {
+            margin-bottom: 1rem;
+        }
+
+        .case-study-hero p {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .case-study-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 8rem;
+            align-items: center;
+        }
+
+        .case-study-image img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        .feature-list {
+            list-style: none;
+            margin-top: 2rem;
+        }
+
+        .feature-list li {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .feature-list li::before {
+            content: '✓';
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .case-study-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar scrolled">
+        <div class="container nav-container">
+            <a href="/index.html" class="logo">P.O <span>Tec</span></a>
+            <a href="/index.html#work" class="btn btn-outline" style="padding: 0.5rem 1rem;">← Back to Portfolio</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="case-study-hero">
+            <div class="container reveal">
+                <div class="badge">Luxury Lifestyle App</div>
+                <h1>Top G</h1>
+                <p>An exclusive luxury lifestyle and financial services web application built with a premium dark-mode
+                    aesthetic.</p>
+            </div>
+        </section>
+
+        <section class="container case-study-content reveal reveal-delay">
+            <div class="case-study-image">
+                <img src="/top_g.png" alt="Top G Application Mockup" />
+            </div>
+            <div class="case-study-text">
+                <h2>The Challenge</h2>
+                <p>Creating an exclusive, high-end digital experience for a private member's club needing discrete
+                    financial monitoring and concierge services.</p>
+
+                <h2 style="margin-top: 2rem;">P.O TEC DIGITAL SOLUTIONS's Solution</h2>
+                <p>We delivered a bespoke, mobile-first web application focusing on extreme elegance, utilizing gold and
+                    purple accents against deep black backgrounds.</p>
+
+                <ul class="feature-list">
+                    <li>Exclusive Member Portals</li>
+                    <li>High-Performance Architecture</li>
+                    <li>Immaculate UI/UX Design</li>
+                    <li>End-to-End Encryption</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="cta" style="padding-top: 0;">
+            <div class="container reveal">
+                <div class="glass glass-cta" style="padding: 3rem 2rem;">
+                    <h2>Want a web app like this?</h2>
+                    <p style="margin-bottom: 1.5rem;">Let P.O TEC DIGITAL SOLUTIONS handle the design and development.
+                    </p>
+                    <a href="/index.html#contact" class="btn btn-primary">Start a Project</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-container" style="display: block; text-align: center;">
+            <div class="footer-brand" style="margin: 0 auto;">
+                <a href="/index.html" class="logo">P.O <span>Tec</span></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="year">2026</span> P.O TEC DIGITAL SOLUTIONS. All rights reserved. | <strong
+                    style="color: var(--primary);">A Registered Company</strong></p>
+        </div>
+    </footer>
+    <script src="/main.js"></script>
+</body>
+
+</html>
