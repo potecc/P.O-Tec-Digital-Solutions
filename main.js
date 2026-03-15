@@ -67,25 +67,30 @@ revealElements.forEach(el => {
 const faqItems = document.querySelectorAll('.faq-item');
 
 faqItems.forEach(item => {
-    const question = item.querySelector('.faq-question');
+    const icon = item.querySelector('.faq-icon');
     const answer = item.querySelector('.faq-answer');
 
-    question.addEventListener('click', () => {
-        // Check if current item is already active
-        const isActive = item.classList.contains('active');
+    if (icon) {
+        icon.addEventListener('click', (e) => {
+            e.stopPropagation(); // prevent bubling
+            e.preventDefault();
 
-        // Close all items
-        faqItems.forEach(otherItem => {
-            otherItem.classList.remove('active');
-            otherItem.querySelector('.faq-answer').style.maxHeight = null;
+            // Check if current item is already active
+            const isActive = item.classList.contains('active');
+
+            // Close all items
+            faqItems.forEach(otherItem => {
+                otherItem.classList.remove('active');
+                otherItem.querySelector('.faq-answer').style.maxHeight = null;
+            });
+
+            // Loop through and toggle the clicked one
+            if (!isActive) {
+                item.classList.add('active');
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            }
         });
-
-        // Loop through and toggle the clicked one
-        if (!isActive) {
-            item.classList.add('active');
-            answer.style.maxHeight = answer.scrollHeight + "px";
-        }
-    });
+    }
 });
 
 // Set the initial height for the item that is active by default in HTML
